@@ -13,12 +13,18 @@ class Layout extends Component {
     this.setState({ drawerstate: false });
   };
 
+  toggleDrawer = () => {
+    this.setState(prevState => {
+      return { drawerstate: !prevState.drawerstate };
+    });
+  };
+
   render() {
     return (
       <Aux>
-        <Toolbar />
+        <Toolbar drawerToggler={this.toggleDrawer} />
         <SideDrawer
-          show={this.state.drawerstate}
+          open={this.state.drawerstate}
           closed={this.sideDrawerCloseHandler}
         />
         <main className={classes.Content}>{this.props.children}</main>
