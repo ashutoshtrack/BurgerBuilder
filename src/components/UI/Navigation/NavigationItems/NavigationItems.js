@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./NavigationItems.css";
+import classes from "./Navitems.css";
 import NavigationItem from "./NavigationItem/NavigationItem";
 
 const navigationitems = props => (
@@ -7,9 +7,7 @@ const navigationitems = props => (
     <NavigationItem link="/" active>
       BurgerBuilder
     </NavigationItem>
-    <NavigationItem link="/" active>
-      Checkout
-    </NavigationItem>
+    <NavigationItem link="/">Checkout</NavigationItem>
   </ul>
 );
 
